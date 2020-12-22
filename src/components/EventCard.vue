@@ -2,30 +2,15 @@
   <div class="event-card">
     <!-- Display event data -->
     <span>@ {{ event.time }} on {{ event.date }}</span>
-    <h4>{{ event.title }}</span>
+    <h4>{{ event.title }}</h4>
   </div>
 </template>
 
 <script>
 export default {
   name: "EventCard",
-  // props: {
-  //   msg: String
-  // }
-  data() {
-    return {
-      event: {
-        id: 123456,
-        category: 'animal welfare',
-        title: 'Cat Adoption Day',
-        description: 'Find your new feline friend at this event.',
-        location: 'Meow Town',
-        date: 'December 21, 2020',
-        time: '12:00',
-        petsAllowed: true,
-        organizer: 'Erik Mortimer'
-      }
-    }
+  props: {
+    event: Object
   }
 };
 </script>
